@@ -4,6 +4,16 @@ namespace Epoque\Markup;
 
 class Html
 {
+    private static $conmmonAttribs = [
+        'id',
+        'class',
+        'dir',
+        'lang',
+        'style',
+        'title',
+        'xml:lang'
+    ];
+
     /**
      * htmlBuilder
      *
@@ -33,11 +43,17 @@ class Html
             $markup .= $spec;
         else if (array_key_exists('text', $spec))
             $markup .= $spec['text'];
+<<<<<<< HEAD
         
         if (!in_array($description, $noendtag) {
           $markup .= "</".$description['tag'].">\n";
         }
         
+=======
+
+        $markup .= "</".$description['tag'].">" . PHP_EOL;
+
+>>>>>>> master
         return $markup;
     }
 
@@ -195,7 +211,7 @@ class Html
         if (array_key_exists('class', $spec))
             $markup .= ' class="'.$spec['class'].'"';
 
-        $markup .= '>';
+        $markup .= '>' . PHP_EOL;
 
         if (array_key_exists('elements', $spec))
             if (is_array($spec['elements']))
@@ -204,7 +220,7 @@ class Html
                 $markup .= $spec['elements'];
 
 
-        $markup .= "</$type>";
+        $markup .= "</$type>" .PHP_EOL;
 
         return $markup;
     }
@@ -243,7 +259,7 @@ class Html
                 $markup .= "<th>$attribute</th>";
             }
 
-            $markup .= "</tr>\n";
+            $markup .= "</tr>" . PHP_EOL;
         }
 
         foreach ($spec['rows'] as $row) {
@@ -253,9 +269,9 @@ class Html
             $markup .= "<td>$data</td>";
           }
 
-          $markup .= "</tr>\n";
+          $markup .= "</tr>" . PHP_EOL;
         }
 
-        return $markup .= "</table>\n";
+        return $markup .= "</table>" . PHP_EOL;
     }
 }

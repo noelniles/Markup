@@ -65,9 +65,9 @@ abstract class BStrapElement
         $html .= 'class="'.$this->type;
 
         if ($this->class != null)
-          $html .= ' '.$this->class.'">';
+          $html .= ' '.$this->class.'">' . PHP_EOL;
         else
-          $html .= '">';
+          $html .= '">' . PHP_EOL;
 
         return $html;
     }
@@ -78,9 +78,9 @@ abstract class BStrapElement
         $html = '';
 
         if ($this->tag == null)
-            $html  = '</div>';
+            $html  = '</div>' . PHP_EOL;
         else
-            $html  = '</'.$this->tag.'>';
+            $html  = '</'.$this->tag.'>' . PHP_EOL;
 
         return $html;
     }
