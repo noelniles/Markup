@@ -44,7 +44,7 @@ class Html
         else if (array_key_exists('text', $spec))
             $markup .= $spec['text'];
         
-        if (!in_array($description, $noendtag) {
+        if (!in_array($description['tag'], $noendtag) {
             $markup .= "</".$description['tag'].">\n";
         }
         
