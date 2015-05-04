@@ -26,7 +26,8 @@ class Html
     {
         $spec    = $description['spec'];
         $markup  = '<'.$description['tag'];
-
+        $noendtag = ['area', 'base', 'br', 'col', 'command', 'embed', 'hr', 
+          'img', 'input', 'link', 'meta', 'param', 'source'];
         if (is_array($spec))
         {
             foreach ($spec as $spec_key => $spec_value)
@@ -42,9 +43,11 @@ class Html
             $markup .= $spec;
         else if (array_key_exists('text', $spec))
             $markup .= $spec['text'];
-
-        $markup .= "</".$description['tag'].">" . PHP_EOL;
-
+        
+        if (!in_array($description['tag'], $noendtag) {
+            $markup .= "</".$description['tag'].">\n";
+        }
+        
         return $markup;
     }
 
