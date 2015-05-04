@@ -43,17 +43,11 @@ class Html
             $markup .= $spec;
         else if (array_key_exists('text', $spec))
             $markup .= $spec['text'];
-<<<<<<< HEAD
         
         if (!in_array($description, $noendtag) {
-          $markup .= "</".$description['tag'].">\n";
+            $markup .= "</".$description['tag'].">\n";
         }
         
-=======
-
-        $markup .= "</".$description['tag'].">" . PHP_EOL;
-
->>>>>>> master
         return $markup;
     }
 
