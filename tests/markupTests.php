@@ -45,3 +45,4 @@ $container->addRow($row);
 
 echo $container->toHtml();
 
+include 'html-test.php';
