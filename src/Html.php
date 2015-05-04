@@ -4,7 +4,7 @@ namespace Epoque\Markup;
 
 class Html
 {
-    private static $conmmon_attribs = [
+    private static $conmmonAttribs = [
         'id',
         'class',
         'dir',
