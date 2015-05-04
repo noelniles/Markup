@@ -26,7 +26,7 @@ class Html
             }
         }
 
-        $markup .= '>' . PHP_EOL;
+        $markup .= '>';
 
         if(is_string($spec))
             $markup .= $spec;
