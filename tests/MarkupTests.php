@@ -5,12 +5,6 @@
 </head>
 <?php
 
-require_once 'src/Html.php';
-require_once 'src/BStrapElement.php';
-require_once 'src/Container.php';
-require_once 'src/Row.php';
-require_once 'src/Column.php';
-
 use Epoque\Markup\Html;
 use Epoque\Markup\BStrapElement;
 use Epoque\Markup\Container;

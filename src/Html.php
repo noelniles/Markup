@@ -4,6 +4,16 @@ namespace Epoque\Markup;
 
 class Html
 {
+    private static $conmmon_attribs = [
+        'id',
+        'class',
+        'dir',
+        'lang',
+        'style',
+        'title',
+        'xml:lang'
+    ];
+
     /**
      * htmlBuilder
      *
